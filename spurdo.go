@@ -3,7 +3,6 @@ package spurdo
 
 import (
 	"errors"
-	"fmt"
 	"math/rand"
 	"regexp"
 	"strings"
@@ -94,7 +93,6 @@ func Translate(String string) (string, error) {
 	}
 	r := regexp.MustCompile(`[.,\/#!$%\^&\*;:]`)
 	matches := r.FindAllString(String, -1)
-	fmt.Println(matches)
 	for _, match := range matches {
 		String = strings.Replace(String, match, ebinfaces[rand.Intn(len(ebinfaces))], 1)
 	}
