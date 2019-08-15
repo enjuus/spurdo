@@ -1,5 +1,5 @@
 // a spurdo dranzlator paggage.
-package main
+package spurdo
 
 import (
 	"errors"
@@ -8,11 +8,6 @@ import (
 	"regexp"
 	"strings"
 )
-func main() {
-	string := "translate this faggot. test ."
-	str, _ := Translate(string)
-	fmt.Println(str)
-}
 
 // tagez a sdrign to be "dranzlated" idno spurdo
 func Translate(String string) (string, error) {
